@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".QuizQuestionActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:hint="What country does this flag belong to?"
+            android:textColor="@color/question_color"
+            android:textSize="22sp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_flag_of_argentina" />
+
+        <LinearLayout
+            android:id="@+id/ll_progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/progress_bar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:indeterminate="false"
+
+                android:max="10"
+                android:minHeight="10dp"
+                android:progress="0" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="15dp"
+                android:textColor="@color/light_grey"
+                android:textColorHint="@color/light_grey"
+                android:textSize="14sp"
+                tools:text="0/10" />
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_option1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/default_option_border"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textColor="@color/light_grey"
+            android:textSize="18sp"
+            android:onClick="onOptionSelect"
+            tools:text="India" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_option2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/default_option_border"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textColor="@color/light_grey"
+            android:textSize="18sp"
+            android:onClick="onOptionSelect"
+            tools:text="Japan" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_option3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/default_option_border"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textColor="@color/light_grey"
+            android:textSize="18sp"
+            android:onClick="onOptionSelect"
+            tools:text="China" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_option4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/default_option_border"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textColor="@color/light_grey"
+            android:textSize="18sp"
+            android:onClick="onOptionSelect"
+            tools:text="South Korea" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:onClick="onSubmit"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</ScrollView>
